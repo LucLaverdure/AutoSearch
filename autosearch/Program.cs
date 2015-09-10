@@ -60,11 +60,10 @@ namespace autosearch
                 if (nextKeyClear == true)
                 {
                     kz = "";
+                    nextKeyClear = false;
                 }
-                if (vkCode == 13 || vkCode == 32)
-                    wordStack++;
-                if (vkCode == 13)
-                    nextKeyClear = true;
+                if (vkCode == 13 || vkCode == 32) wordStack++;
+                if (vkCode == 13) nextKeyClear = true;
                 if (wordStack > 8) {
                     wordStack--;
                     kz = String.Join(" ", kz.Split(char.Parse(" ")).Skip(1).ToArray());
