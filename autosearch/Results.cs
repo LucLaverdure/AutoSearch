@@ -35,7 +35,7 @@ namespace autosearch
                     browser.Navigate("http://google.com/search?q=" + this.txtSearch.Text);
                     lastS = this.txtSearch.Text;
                 }
-                catch (Exception e) { }
+                catch (Exception e2) { }
             }
         }
     }
