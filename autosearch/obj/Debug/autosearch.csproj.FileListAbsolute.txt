@@ -1,0 +1,9 @@
+c:\users\ruku\documents\visual studio 2015\Projects\autosearch\autosearch\bin\Debug\autosearch.exe.config
+c:\users\ruku\documents\visual studio 2015\Projects\autosearch\autosearch\obj\Debug\autosearch.csprojResolveAssemblyReference.cache
+c:\users\ruku\documents\visual studio 2015\Projects\autosearch\autosearch\obj\Debug\autosearch.Properties.Resources.resources
+c:\users\ruku\documents\visual studio 2015\Projects\autosearch\autosearch\obj\Debug\autosearch.Results.resources
+c:\users\ruku\documents\visual studio 2015\Projects\autosearch\autosearch\obj\Debug\autosearch.csproj.GenerateResource.Cache
+c:\users\ruku\documents\visual studio 2015\Projects\autosearch\autosearch\bin\Debug\autosearch.exe
+c:\users\ruku\documents\visual studio 2015\Projects\autosearch\autosearch\bin\Debug\autosearch.pdb
+c:\users\ruku\documents\visual studio 2015\Projects\autosearch\autosearch\obj\Debug\autosearch.exe
+c:\users\ruku\documents\visual studio 2015\Projects\autosearch\autosearch\obj\Debug\autosearch.pdb
