@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.browser = new System.Windows.Forms.WebBrowser();
+            this.timNavigate = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -68,6 +70,12 @@
             this.browser.TabIndex = 2;
             this.browser.WebBrowserShortcutsEnabled = false;
             // 
+            // timNavigate
+            // 
+            this.timNavigate.Enabled = true;
+            this.timNavigate.Interval = 2300;
+            this.timNavigate.Tick += new System.EventHandler(this.timNavigate_Tick);
+            // 
             // Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,5 +98,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.WebBrowser browser;
+        private System.Windows.Forms.Timer timNavigate;
     }
 }

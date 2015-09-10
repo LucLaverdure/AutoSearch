@@ -12,7 +12,7 @@ namespace autosearch
 {
     public partial class Results : Form
     {
-
+        private String lastS = "";
         public Results()
         {
             InitializeComponent();
@@ -24,11 +24,19 @@ namespace autosearch
 
         public void setSearch(String kz) {
             this.txtSearch.Text = kz;
-            try
+        }
+
+        private void timNavigate_Tick(object sender, EventArgs e)
+        {
+            if (this.txtSearch.Text != lastS)
             {
-                browser.Navigate("http://google.com/search?q=" + kz);
+                try
+                {
+                    browser.Navigate("http://google.com/search?q=" + this.txtSearch.Text);
+                    lastS = this.txtSearch.Text;
+                }
+                catch (Exception e) { }
             }
-            catch (Exception e) { }
         }
     }
 }

@@ -17,6 +17,7 @@ namespace autosearch
         private static IntPtr _hookID = IntPtr.Zero;
         private static String kz = "";
         public static Results frmResults = null;
+        private static Boolean nextKeyClear = false;
 
         /// <summary>
         /// The main entry point for the application.
@@ -56,9 +57,14 @@ namespace autosearch
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
             {
                 int vkCode = Marshal.ReadInt32(lParam);
-                //kz += (Keys)vkCode;
+                if (nextKeyClear == true)
+                {
+                    kz = "";
+                }
                 if (vkCode == 13 || vkCode == 32)
                     wordStack++;
+                if (vkCode == 13)
+                    nextKeyClear = true;
                 if (wordStack > 8) {
                     wordStack--;
                     kz = String.Join(" ", kz.Split(char.Parse(" ")).Skip(1).ToArray());
