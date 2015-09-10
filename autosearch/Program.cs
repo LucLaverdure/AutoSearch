@@ -69,8 +69,10 @@ namespace autosearch
                     kz = String.Join(" ", kz.Split(char.Parse(" ")).Skip(1).ToArray());
                 }
                 if ((vkCode >= 32 && vkCode <= 126) || (vkCode >= 192 && vkCode <= 255))
+                {
                     kz += (char)vkCode;
-                frmResults.setSearch(kz);
+                    frmResults.setSearch(kz);
+                }
             }
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
         }
